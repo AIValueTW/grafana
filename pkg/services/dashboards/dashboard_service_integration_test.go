@@ -17,11 +17,11 @@ import (
 )
 
 func TestIntegratedDashboardService(t *testing.T) {
-	Convey("Dashboard service integration tests", t, func() {
+	FocusConvey("Dashboard service integration tests", t, func() {
 		sqlStore := sqlstore.InitTestDB(t)
 		const testOrgID int64 = 1
 
-		Convey("Given saved folders and dashboards in organization A", func() {
+		FocusConvey("Given saved folders and dashboards in organization A", func() {
 			origUpdateAlerting := UpdateAlerting
 			t.Cleanup(func() {
 				UpdateAlerting = origUpdateAlerting
